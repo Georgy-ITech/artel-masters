@@ -22,8 +22,8 @@ export function SiteFooter() {
             <a className="foot__link" href="tel:+74950483170">
               +7 495 048-31-70
             </a>
-            <a className="foot__link" href="mailto:svet@artelsvet.ru">
-              svet@artelsvet.ru
+            <a className="foot__link" href="mailto:kurator@artelkrd.ru">
+              kurator@artelkrd.ru
             </a>
           </div>
           <div className="foot__col">

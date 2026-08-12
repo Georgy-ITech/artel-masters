@@ -64,7 +64,7 @@ const jsonLd = {
     "Площадка частных мастеров с личной проверкой: репетиторы, ремонт, съёмка.",
   areaServed: "Краснодар",
   telephone: "+7 495 048-31-70",
-  email: "svet@artelsvet.ru",
+  email: "kurator@artelkrd.ru",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
