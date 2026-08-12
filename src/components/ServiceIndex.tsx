@@ -7,7 +7,7 @@ import gsap from "gsap";
 import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Arrow } from "./Marks";
-import { mastersOf, type Service } from "@/data/artel";
+import { mastersOf, plural, type Service } from "@/data/artel";
 
 gsap.registerPlugin(Flip, ScrollTrigger);
 
@@ -117,7 +117,7 @@ export function ServiceIndex({ items }: { items: Service[] }) {
                   <span className="svc__blurb">{item.blurb}</span>
                   <span className="svc__meta">
                     {item.staffed
-                      ? `${count} ${count === 1 ? "мастер" : count < 5 ? "мастера" : "мастеров"} · ${item.priceFrom}`
+                      ? `${count} ${plural(count, "мастер", "мастера", "мастеров")} · ${item.priceFrom}`
                       : "Идёт набор"}
                   </span>
                 </span>

@@ -193,10 +193,13 @@ section[id] {
   align-items: center;
   gap: clamp(1rem, 4vw, 3rem);
   padding: 1rem clamp(1.25rem, 4vw, 2.75rem);
+  /* плотнее сверху и длиннее хвост: крупный дисплейный заголовок уходит
+     под шапку приглушённым, но нижней границы у плашки по-прежнему нет */
   background: linear-gradient(
     to bottom,
-    rgba(12, 10, 7, 0.9) 0%,
-    rgba(12, 10, 7, 0.6) 55%,
+    rgba(12, 10, 7, 0.98) 0%,
+    rgba(12, 10, 7, 0.92) 45%,
+    rgba(12, 10, 7, 0.55) 75%,
     rgba(12, 10, 7, 0) 100%
   );
   transition: background 0.4s ease, color 0.4s ease;
@@ -205,8 +208,9 @@ section[id] {
 .masthead[data-onlight="true"] {
   background: linear-gradient(
     to bottom,
-    rgba(246, 240, 230, 0.95) 0%,
-    rgba(246, 240, 230, 0.75) 55%,
+    rgba(246, 240, 230, 0.98) 0%,
+    rgba(246, 240, 230, 0.92) 45%,
+    rgba(246, 240, 230, 0.6) 75%,
     rgba(246, 240, 230, 0) 100%
   );
   color: var(--paper-ink);

@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
 import { WriteToMaster } from "./WriteToMaster";
-import type { Master, Service } from "@/data/artel";
+import { plural, type Master, type Service } from "@/data/artel";
 
 export function ServiceMasters({
   service,
@@ -14,6 +14,7 @@ export function ServiceMasters({
 }) {
   const [recipient, setRecipient] = useState<string | null>(null);
   const form = useRef<HTMLDivElement>(null);
+  const slots = service.openSlots ?? 0;
 
   const write = (name: string) => {
     setRecipient(name);
@@ -34,7 +35,8 @@ export function ServiceMasters({
                 <span className="roster__no">{String(i + 1).padStart(2, "0")}</span>
                 <span className="roster__name">{m.name}</span>
                 <span className="roster__craft">
-                  {m.craft}. {m.city}, {m.years} лет практики
+                  {m.craft}. {m.city}, {m.years}{" "}
+                  {plural(m.years, "год", "года", "лет")} практики
                 </span>
                 <span className="roster__price">{m.price}</span>
                 <span className="roster__action">
@@ -52,9 +54,9 @@ export function ServiceMasters({
         ) : (
           <div className="roster__empty">
             <p className="roster__empty-text">
-              Открыто {service.openSlots} места. Мы не показываем мастеров, пока
-              они не прошли все три ступени, — даже если из-за этого раздел
-              стоит пустым.
+              Открыто {slots} {plural(slots, "место", "места", "мест")}. Мы не
+              показываем мастеров, пока они не прошли все три ступени, — даже
+              если из-за этого раздел стоит пустым.
             </p>
             <p>
               <Link className="act act--quiet" href="/#masteram" prefetch={false}>
