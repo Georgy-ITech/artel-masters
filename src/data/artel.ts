@@ -26,12 +26,14 @@ export type Master = {
   price: string;
 };
 
+const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const services: Service[] = [
   {
     slug: "repetitory",
     name: "Репетиторы",
     group: "Репетиторы",
-    cover: "/covers/repetitory.jpg",
+    cover: base + "/covers/repetitory.jpg",
     coverAlt: "Репетитор занимается с учеником за столом у окна",
     blurb: "Математика, русский, английский, физика",
     intro:
@@ -43,7 +45,7 @@ export const services: Service[] = [
     slug: "santehnika",
     name: "Сантехника",
     group: "Ремонт",
-    cover: "/covers/santehnika.jpg",
+    cover: base + "/covers/santehnika.jpg",
     coverAlt: "Сантехник подключает подводку к прибору",
     blurb: "Стояки, разводка, приборы, тёплый пол",
     intro:
@@ -55,7 +57,7 @@ export const services: Service[] = [
     slug: "elektrika",
     name: "Электрика",
     group: "Ремонт",
-    cover: "/covers/elektrika.jpg",
+    cover: base + "/covers/elektrika.jpg",
     coverAlt: "Электрик с мультиметром у распределительного щита",
     blurb: "Щиты, проводка, освещение, слаботочка",
     intro:
@@ -67,7 +69,7 @@ export const services: Service[] = [
     slug: "plitka-sanuzly",
     name: "Плитка и санузлы",
     group: "Ремонт",
-    cover: "/covers/plitka-sanuzly.jpg",
+    cover: base + "/covers/plitka-sanuzly.jpg",
     coverAlt: "Плиточник на стремянке укладывает плитку на стену",
     blurb: "Санузел под ключ, керамогранит, мозаика",
     intro:
@@ -79,7 +81,7 @@ export const services: Service[] = [
     slug: "stolyarnye-raboty",
     name: "Столярные работы",
     group: "Ремонт",
-    cover: "/covers/stolyarnye-raboty.jpg",
+    cover: base + "/covers/stolyarnye-raboty.jpg",
     coverAlt: "Столяр за верстаком в мастерской",
     blurb: "Мебель на заказ, двери, лестницы",
     intro:
@@ -91,7 +93,7 @@ export const services: Service[] = [
     slug: "svadebnaya-syomka",
     name: "Свадебная съёмка",
     group: "Съёмка",
-    cover: "/covers/svadebnaya-syomka.jpg",
+    cover: base + "/covers/svadebnaya-syomka.jpg",
     coverAlt: "Невеста с букетом и жених у окна",
     blurb: "Полный день, камерные свадьбы, плёнка",
     intro:
@@ -103,7 +105,7 @@ export const services: Service[] = [
     slug: "semeynaya-syomka",
     name: "Семейная съёмка",
     group: "Съёмка",
-    cover: "/covers/semeynaya-syomka.jpg",
+    cover: base + "/covers/semeynaya-syomka.jpg",
     coverAlt: "Семья с двумя детьми в комнате при вечернем свете из окна",
     blurb: "Дома при своём свете, прогулки, дети",
     intro:
@@ -115,7 +117,7 @@ export const services: Service[] = [
     slug: "reportazh",
     name: "Репортаж и события",
     group: "Съёмка",
-    cover: "/covers/reportazh.jpg",
+    cover: base + "/covers/reportazh.jpg",
     coverAlt: "Зал с публикой на конференции",
     blurb: "Конференции, корпоративы, съёмка в зале",
     intro:
@@ -127,7 +129,7 @@ export const services: Service[] = [
     slug: "predmetnaya-syomka",
     name: "Предметная съёмка",
     group: "Съёмка",
-    cover: "/covers/predmetnaya-syomka.jpg",
+    cover: base + "/covers/predmetnaya-syomka.jpg",
     coverAlt: "Предметная композиция с косметикой и сухоцветами",
     blurb: "Каталог, маркетплейсы, композиции",
     intro:

@@ -56,8 +56,11 @@ export function TransitionLayer() {
 
       const link = (e.target as HTMLElement)?.closest?.("a");
       if (!link) return;
-      const href = link.getAttribute("href");
-      if (!href || !href.startsWith("/")) return;
+      // в атрибуте ссылки уже стоит подпапка сайта, а router.push добавит её сам
+      const base = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+      const raw = link.getAttribute("href");
+      if (!raw || !raw.startsWith("/")) return;
+      const href = base && raw.startsWith(base) ? raw.slice(base.length) || "/" : raw;
       if (link.target && link.target !== "_self") return;
 
       const [path] = href.split("#");

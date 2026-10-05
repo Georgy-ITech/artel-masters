@@ -3,7 +3,7 @@ import { services } from "@/data/artel";
 
 export const dynamic = "force-static";
 
-const base = "https://artel-masters.vercel.app";
+const base = "https://georgy-itech.github.io/artel-masters";
 const lastModified = new Date("2026-08-09");
 
 export default function sitemap(): MetadataRoute.Sitemap {

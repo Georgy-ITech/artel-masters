@@ -1,6 +1,6 @@
 # Артель — площадка частных мастеров с личной проверкой
 
-**Живой сайт:** [artel-masters.vercel.app](https://artel-masters.vercel.app)
+**Живой сайт:** [georgy-itech.github.io/artel-masters](https://georgy-itech.github.io/artel-masters/)
 
 Next.js 16 (App Router) + TypeScript + React Three Fiber. Главная — тёмная комната, в которой по кругу висят девять фотокарточек услуг: приглушённые, набирающие цвет под курсором и ведущие каждая на свою страницу. Ремонт, репетиторы и съёмка — девять услуг, у каждой свой адрес.
 

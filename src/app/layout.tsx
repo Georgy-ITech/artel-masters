@@ -23,7 +23,7 @@ const oranienbaum = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://artel-masters.vercel.app"),
+  metadataBase: new URL("https://georgy-itech.github.io/artel-masters"),
   title: {
     default: "Артель — мастера, которых мы проверили лично",
     template: "%s — Артель",
@@ -59,7 +59,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Артель",
-  url: "https://artel-masters.vercel.app/",
+  url: "https://georgy-itech.github.io/artel-masters/",
   description:
     "Площадка частных мастеров с личной проверкой: репетиторы, ремонт, съёмка.",
   areaServed: "Краснодар",
@@ -69,7 +69,12 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="ru" className={`${golos.variable} ${oranienbaum.variable}`}>
+    <html
+      lang="ru"
+      className={`${golos.variable} ${oranienbaum.variable}`}
+      // бумага из public: путь с подпапкой сайта, в CSS его не подставить
+      style={{ "--paper-img": `url("${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/paper.jpg")` } as React.CSSProperties}
+    >
       <body>
         <div
           style={{ display: "none" }}

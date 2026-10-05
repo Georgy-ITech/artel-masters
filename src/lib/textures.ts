@@ -56,7 +56,7 @@ let paper: THREE.Texture | null = null;
 /** Одна фотография бумаги на все карточки — поле, на которое наклеен кадр. */
 export function paperTexture() {
   if (!paper) {
-    paper = textureLoader.load("/paper.jpg");
+    paper = textureLoader.load(`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/paper.jpg`);
     paper.wrapS = THREE.RepeatWrapping;
     paper.wrapT = THREE.RepeatWrapping;
     paper.colorSpace = THREE.SRGBColorSpace;

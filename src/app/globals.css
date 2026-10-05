@@ -701,7 +701,7 @@ section[id] {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: url("/paper.jpg");
+  background-image: var(--paper-img);
   background-size: 1100px auto;
   mix-blend-mode: multiply;
   opacity: 0.07;
@@ -862,7 +862,7 @@ section[id] {
       rgba(246, 240, 230, 0.84),
       rgba(246, 240, 230, 0.84)
     ),
-    url("/paper.jpg");
+    var(--paper-img);
   background-size: auto, 620px auto;
   transition: background-color 0.4s ease;
 }
